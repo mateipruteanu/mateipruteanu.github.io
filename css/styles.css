@@ -1,0 +1,111 @@
+/* 
+selector {
+  property:value
+}
+
+id: #{name}
+class: .{name}
+
+div -> block elements
+span -> inline elements (doesn't start a new line)
+universal selector -> * (least amount of specificity)
+
+RGBA = RGB + opacity/transparency (0-1)
+font-size, width, height
+
+em - relative tied to parent
+1em = 16px (default browser text size)
+->If you change font size in browser, the em equivalent will change as well
+->em follows the parent font size
+
+rem - relative depends on root
+1rem = 16px default browser style
+
+vh - height - relative to percent of the screen
+vw - width - percent of the screen
+
+calc() perform calculations
+ex: min-height: calc(100vh - 100px); exclude navbar size
+
+font-size, font-family
+generic families: serif, sans-serif, cursive, fantasy, monospace
+
+border: 13px solid yellow;
+
+outline
+
+Block: Always starts a new line, takes up full width
+Inline: Does not start a new line and only takes up as much as it needs
+
+opacity:from 0 to 1
+transparency
+
+background:url("...");
+background-size:cover;
+background-position:center;
+
+->> background-attachment: fixed; <<-
+
+exDiv{
+  min-height: 100vh;
+  color: green;
+  border: 2px solid orangered;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+exImg{
+  background: url("../Pictures/big.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+background:linear-gradient(to top, red, white);
+
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Pictures/big.jpeg")center/cover no-repeat fixed;
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 60px;
+}
+
+.banner {
+  background: url("../Pictures/big.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.banner .mainTitle {
+  display: flexbox;
+  text-align: center;
+  color: orangered;
+  text-shadow: 5px 5px 1px black;
+  position: fixed;
+}
+
+.header {
+  background: linear-gradient(to bottom, rgba(0, 238, 255, 0), rgb(0, 12, 12)),
+    url("../Pictures/big.jpeg") center/cover no-repeat fixed;
+}
+
+.header h6 {
+  margin-top: 20vh;
+}
