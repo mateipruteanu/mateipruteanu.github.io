@@ -107,7 +107,8 @@ div {
 }
 
 .header h6 {
-  margin-top: 20vh;
+  position: relative;
+  margin-top: 20rem;
   color: #fbf2c0;
   text-shadow: 4px 3px #36382e;
 }
