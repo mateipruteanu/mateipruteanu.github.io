@@ -74,65 +74,46 @@ background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Pic
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-div {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 60px;
-}
-
-.banner {
-  background: url("../Pictures/big.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.banner .mainTitle {
-  display: flexbox;
-  text-align: center;
-  color: orangered;
-  text-shadow: 5px 5px 1px black;
+.container {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
 }
 
-.header {
-  background: linear-gradient(to bottom, rgba(25, 21, 22, 0), rgb(25, 21, 22)),
-    url("../Pictures/big.jpeg") center/cover no-repeat fixed;
+.container section {
+  min-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: cornsilk;
 }
 
-.header h6 {
-  position: relative;
-  margin-top: 20rem;
-  color: #fbf2c0;
-  text-shadow: 4px 3px #36382e;
+.container section:nth-child(2) {
+  background: darkorange;
 }
 
-.rainbow:hover {
+.container section:nth-child(3) {
+  background: deepskyblue;
+}
+
+.container section .content {
   text-align: center;
-  text-decoration: none;
-  animation: colorRotate 0.5s linear 0s infinite;
+  padding: 50px;
 }
 
-@keyframes colorRotate {
-  from {
-    color: #6666ff;
+/* @media (max-width: 991px) {
+  .container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    transform: none !important;
   }
-  10% {
-    color: #0099ff;
-  }
-  50% {
-    color: #00ff00;
-  }
-  75% {
-    color: #ff3399;
-  }
-  100% {
-    color: #6666ff;
-  }
-}
+} */
